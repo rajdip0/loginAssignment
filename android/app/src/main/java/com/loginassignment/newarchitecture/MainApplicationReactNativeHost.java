@@ -1,4 +1,4 @@
-package com.loginassignment.newarchitecture;
+package com.loginassignment.rajdip.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.loginassignment.BuildConfig;
-import com.loginassignment.newarchitecture.components.MainComponentsRegistry;
-import com.loginassignment.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.loginassignment.rajdip.BuildConfig;
+import com.loginassignment.rajdip.newarchitecture.components.MainComponentsRegistry;
+import com.loginassignment.rajdip.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

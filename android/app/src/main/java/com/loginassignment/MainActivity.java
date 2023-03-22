@@ -1,4 +1,4 @@
-package com.loginassignment;
+package com.loginassignment.rajdip;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

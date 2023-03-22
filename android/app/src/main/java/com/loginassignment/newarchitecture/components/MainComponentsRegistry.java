@@ -1,4 +1,4 @@
-package com.loginassignment.newarchitecture.components;
+package com.loginassignment.rajdip.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
