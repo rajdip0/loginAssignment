@@ -31,14 +31,19 @@ export function* getTokenSaga() {
 
 export function* loginSaga(action) {
   try {
-    const response = yield call(
-      [auth(), 'signInWithPhoneNumber'],
+    // const response = yield call(
+    //   [auth(), 'signInWithPhoneNumber'],
+    //   `+91${action.payload}`,
+    // );
+
+    const confirmation = yield auth().signInWithPhoneNumber(
       `+91${action.payload}`,
     );
-    console.log(response);
 
-    if (response != null) {
-      yield put(loginSuccess(response));
+    console.log(confirmation);
+
+    if (confirmation != null) {
+      yield put(loginSuccess(confirmation));
     } else {
       yield put(loginSuccess(null));
     }
@@ -48,14 +53,17 @@ export function* loginSaga(action) {
 }
 
 export function* verifyOTPSaga(action) {
-  const {confirmation, otp} = action.payload;
+  let items = yield select(getItem);
 
   try {
-    const response = yield call([confirmation, confirmation.confirm], otp);
-    console.log(response);
+    // const response = yield call([confirmation, confirmation.confirm], otp);
 
-    if (response != null) {
-      yield put(verifyOTPSuccess(response));
+    const confirmation = yield items.loginResponse.confirm(action.payload.otp);
+
+    console.log(confirmation);
+
+    if (confirmation != null) {
+      yield put(verifyOTPSuccess(confirmation));
     } else {
       yield put(verifyOTPSuccess(null));
     }

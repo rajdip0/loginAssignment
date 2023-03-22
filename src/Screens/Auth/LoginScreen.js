@@ -15,11 +15,30 @@ import Toast from '../../utils/Toast';
 import connectionrequest from '../../utils/NetInfo';
 import {loginRequest} from '../../redux/reducer/AuthReducer';
 
-const LoginScreen = () => {
+let status = '';
+
+const LoginScreen = props => {
   const dispatch = useDispatch();
   const AuthReducer = useSelector(state => state.AuthReducer);
   const [number, setNumber] = useState('');
+  if (status === '' || AuthReducer.status !== status) {
+    switch (AuthReducer.status) {
+      case 'Auth/loginRequest':
+        status = AuthReducer.status;
+        break;
+      case 'Auth/loginSuccess':
+        status = AuthReducer.status;
+        props.navigation.navigate('OTPScreen', {
+          con: AuthReducer.loginResponse,
+        });
+        break;
 
+      case 'Auth/loginFailure':
+        status = AuthReducer.status;
+        Toast(AuthReducer?.error?.message);
+        break;
+    }
+  }
   return (
     <SafeAreaView
       style={{

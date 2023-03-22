@@ -6449,6 +6449,11 @@
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.6.tgz"
   "version" "0.0.6"
 
+"react-native-otp-auto-fill@^0.1.17":
+  "integrity" "sha512-BqFS9FIta18gtq8Z4wyoCLwaNxzPJWvvnu73L+yEu2ITI+izYGwwt8Rm9XwavdS+IiOZ9tilWKmCl+VhhGztQQ=="
+  "resolved" "https://registry.npmjs.org/react-native-otp-auto-fill/-/react-native-otp-auto-fill-0.1.17.tgz"
+  "version" "0.1.17"
+
 "react-native-safe-area-context@^4.5.0", "react-native-safe-area-context@>= 3.0.0":
   "integrity" "sha512-0WORnk9SkREGUg2V7jHZbuN5x4vcxj/1B0QOcXJjdYWrzZHgLcUzYWWIUecUPJh747Mwjt/42RZDOaFn3L8kPQ=="
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-4.5.0.tgz"
